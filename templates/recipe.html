@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-12">
+    <h1 class="display-5 mb-3">{{ recipe.name }}</h1>
+  </div>
+  
+  <div class="col-lg-7">
+    
+    <img src="{{ recipe.image_url }}" 
+         class="img-fluid recipe-header-img mb-4 shadow-sm" 
+         alt="{{ recipe.name }}"
+         onerror="this.src='{{ recipe.image_placeholder }}'; this.onerror=null;">
+  </div>
+  
+  <div class="col-lg-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title">Ingredients</h3>
+        
+        <div class="mb-3">
+          <label for="portion-input" class="form-label">
+            <strong>Servings:</strong>
+          </label>
+          <input type="number" 
+                 class="form-control" 
+                 id="portion-input" 
+                 value="{{ recipe.default_servings }}" 
+                 min="1">
+        </div>
+        
+        <ul class="list-group list-group-flush" 
+            id="ingredient-list" 
+            data-default-servings="{{ recipe.default_servings }}">
+          
+          {% for ingredient in recipe.ingredients %}
+            <li class="list-group-item" 
+                data-base-quantity="{{ ingredient.quantity }}">
+              
+              <strong class="quantity">{{ ingredient.quantity }}</strong>
+              <span class="text-muted">{{ ingredient.unit }}</span>
+              {{ ingredient.name }}
+            </li>
+          {% endfor %}
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-12">
+    <h2>Instructions</h2>
+    <hr>
+    <ol class="list-group list-group-numbered">
+      {% for step in recipe.instructions %}
+        <li class="list-group-item fs-5 p-3">{{ step }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

@@ -6,6 +6,46 @@ app = Flask(__name__)
 # This is a simple Python dictionary. You can easily add, edit, or
 # remove recipes here. For a bigger app, you'd use a database.
 RECIPES = {
+    'garlic-butter':{
+        'name': 'Garlic butter',
+        'id': 'garlic-butter',
+        'description': 'Does it even need an introduction?',
+        'image_url': '/static/images/breadsticks.jpg',
+        'image_placeholder': 'https://via.placeholder.com/800x600.png?text=Breadsticks',
+        'default_servings': 4,
+        'ingredients': [
+            {'quantity': 2, 'unit': 'tbsp', 'name': 'Butter, melted (30 g)'},
+            {'quantity': 0.5, 'unit': 'tbsp', 'name': 'Minced fresh parsley (about 4 g)'},
+            {'quantity': 0.5, 'unit': 'tsp', 'name': 'Garlic powder'},
+            {'quantity': 0.5, 'unit': 'tsp', 'name': 'Chili flakes (optional)'},
+            {'quantity': 0.5, 'unit': 'tsp', 'name': 'Parmesan cheese (optional)'}
+        ],
+        'instructions': [
+            'Ask Annisa'
+        ]
+    },
+    'breadsticks':{
+        'name': 'Breadsticks (6 Pcs)',
+        'id': 'breadsticks',
+        'description': 'Soft breadsticks to be enjoyed with sausages or garlic butter',
+        'image_url': '/static/images/breadsticks.jpg',
+        'image_placeholder': 'https://via.placeholder.com/800x600.png?text=Breadsticks',
+        'default_servings': 4,
+        'ingredients': [
+            {'quantity': 120, 'unit': 'ml', 'name': 'Warm water'},
+            {'quantity': 1, 'unit': 'tbsp', 'name': 'Honey (21 g)'},
+            {'quantity': 1.125, 'unit': 'tsp', 'name': 'Active dry yeast'},
+            {'quantity': 2, 'unit': 'tbsp', 'name': 'Unsalted butter, melted and cooled (30 g)'},
+            {'quantity': 0.75, 'unit': 'tsp', 'name': 'Kosher salt'},
+            {'quantity': 225, 'unit': 'g', 'name': 'All-purpose flour'},
+            {'quantity': 0.5, 'unit': 'tbsp', 'name': 'Olive oil, for the bowl (7 ml)'},
+            {'quantity': 30, 'unit': 'g', 'name': 'Semolina flour, for dusting'}
+        ],
+        'instructions': [
+            'Ask Annisa',
+            'For garnishing, use garlic butter (follow garlic butter recipe on main page)'
+        ]
+    },
     'sourdough-pizza': {
         'name': 'Sourdough Pizza',
         'id': 'sourdough-pizza',
@@ -46,12 +86,12 @@ RECIPES = {
         'ingredients': [
             {'quantity': 120, 'unit': 'g', 'name': 'Self-Raising Flour / All Purpose Flour'},
             {'quantity': 1, 'unit': 'tsp', 'name': 'Baking Powder (if all purpose flour is used)'},
-            {'quantity': 0.25, 'unit': 'tbsp', 'name': 'Sugar'},
+            {'quantity': 1, 'unit': 'tbsp', 'name': 'Sugar'},
             {'quantity': 0.25, 'unit': 'tsp', 'name': 'Baking Soda'},
             {'quantity': 0.4, 'unit': 'tsp', 'name': 'Salt'},
             {'quantity': 120, 'unit': 'g', 'name': 'Sourdough Starter Discard'},
             {'quantity': 0.5, 'unit': 'cups', 'name': 'Milk'},
-            {'quantity': 26, 'unit': 'g', 'name': 'Melted Butter'},
+            {'quantity': 28, 'unit': 'g', 'name': 'Melted Butter'},
             {'quantity': 1, 'unit': 'large', 'name': 'Egg'}
         ],
         'instructions': [

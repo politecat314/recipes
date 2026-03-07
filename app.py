@@ -6,6 +6,28 @@ app = Flask(__name__)
 # This is a simple Python dictionary. You can easily add, edit, or
 # remove recipes here. For a bigger app, you'd use a database.
 RECIPES = {
+    'sourdough-boule':{
+        'name': 'Sourdough Boule',
+        'id': 'sourdough-boule',
+        'description': 'A rustic round loaf with a chewy crust and open crumb, perfect for sandwiches or with butter.',
+        'image_url': '/static/images/sourdough-boule.jpg',
+        'image_placeholder': 'https://via.placeholder.com/800x600.png?text=Sourdough+Boule',
+        'default_servings': 1,
+        'ingredients': [
+            {'quantity': 100, 'unit': 'g', 'name': 'Active sourdough starter'},
+            {'quantity': 300, 'unit': 'g', 'name': 'Water'},
+            {'quantity': 10, 'unit': 'g', 'name': 'Salt'},
+            {'quantity': 450, 'unit': 'g', 'name': 'Bread flour'}
+        ],
+        'instructions': [
+            'Mix the ingredients together and rest for 30 mins (autolyse).',
+            'Stretch and fold x4 every 30 mins for 2 hours (bulk fermentation).',
+            'Rest for 5 hours (25 degrees) or until bubbles form on top and jiggly.',
+            'Preshape using bench scraper, rest for 30 mins uncovered.',
+            'Shape into a boule, place in a banneton and rest for 30 mins in the counter, 6 hours in the fridge (cold retardation).',
+            'Preheat dutch oven to 250 degrees. 25 mins bake covered. 25 mins bake uncovered at 240 degrees.'
+        ]
+    },
     'garlic-butter':{
         'name': 'Garlic butter',
         'id': 'garlic-butter',

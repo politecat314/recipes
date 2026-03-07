@@ -10,7 +10,7 @@ RECIPES = {
         'name': 'Sourdough Boule',
         'id': 'sourdough-boule',
         'description': 'A rustic round loaf with a chewy crust and open crumb, perfect for sandwiches or with butter.',
-        'image_url': '/static/images/sourdough-boule.jpg',
+        'image_url': '/static/images/sourdough-boule.png',
         'image_placeholder': 'https://via.placeholder.com/800x600.png?text=Sourdough+Boule',
         'default_servings': 1,
         'ingredients': [

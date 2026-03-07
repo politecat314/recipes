@@ -6,6 +6,27 @@ app = Flask(__name__)
 # This is a simple Python dictionary. You can easily add, edit, or
 # remove recipes here. For a bigger app, you'd use a database.
 RECIPES = {
+    'submarine-sauce':{
+        'name': 'Submarine Sauce',
+        'id': 'submarine-sauce',
+        'description': 'A tangy and spicy sauce perfect for submarine sandwiches.',
+        'image_url': '/static/images/submarine.jpg',
+        'image_placeholder': 'https://via.placeholder.com/800x600.png?text=Submarine+Sauce',
+        'default_servings': 1,
+        'ingredients': [
+            {'quantity': 150, 'unit': 'g', 'name': 'Sunflower oil'},
+            {'quantity': 1, 'unit': 'amount', 'name': 'Egg'},
+            {'quantity': 1, 'unit': 'amount', 'name': 'Garlic clove'},
+            {'quantity': 0.5, 'unit': 'amount', 'name': 'Lemon juice'},
+            {'quantity': 0.5, 'unit': 'tsp', 'name': 'Black pepper'},
+            {'quantity': 0.5, 'unit': 'tsp', 'name': 'Mustard'},
+            {'quantity': 0.5, 'unit': 'tsp', 'name': 'Chilli flakes'},
+            {'quantity': 0.25, 'unit': 'tsp', 'name': 'Salt'},
+        ],
+        'instructions': [
+            'Mix using hand blender.'
+        ]
+    },
     'sourdough-boule':{
         'name': 'Sourdough Boule',
         'id': 'sourdough-boule',

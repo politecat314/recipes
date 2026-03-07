@@ -1,0 +1,22 @@
+name: Deploy Recipes Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 68.183.177.15
+          username: amambe-deploy
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /srv/recipes
+            git pull origin main
+            sudo systemctl restart recipes_app.service

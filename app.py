@@ -6,6 +6,31 @@ app = Flask(__name__)
 # This is a simple Python dictionary. You can easily add, edit, or
 # remove recipes here. For a bigger app, you'd use a database.
 RECIPES = {
+    'sourdough-cacio-e-pepe-boule':{
+        'name': 'Sourdough Cacio e Pepe Boule',
+        'id': 'sourdough-cacio-e-pepe-boule',
+        'description': 'A rustic round loaf with roasted black pepper and parmesan, perfect with butter.',
+        'image_url': '/static/images/sourdough-boule.png',
+        'image_placeholder': 'https://via.placeholder.com/800x600.png?text=Sourdough+Boule',
+        'default_servings': 1,
+        'ingredients': [
+            {'quantity': 100, 'unit': 'g', 'name': 'Active sourdough starter'},
+            {'quantity': 300, 'unit': 'g', 'name': 'Water'},
+            {'quantity': 7, 'unit': 'g', 'name': 'Salt'},
+            {'quantity': 450, 'unit': 'g', 'name': 'Bread flour'},
+            {'quantity': 90, 'unit': 'g', 'name': 'Parmesan cheese (1/4 inch cubes)'},
+            {'quantity': 0.5, 'unit': 'tsp', 'name': 'Roasted black pepper (freshly cracked)'}
+        ],
+        'instructions': [
+            'Mix the ingredients together and rest for 30 mins (autolyse).',
+            'Stretch and fold x4 every 30 mins for 2 hours (bulk fermentation).',
+            'Mix half of the inclusions (black pepper and parmesan) into the dough during 2nd stretch and fold. Mix the rest of the inclusions during 3rd stretch and fold.',
+            'Rest for 5 hours (25 degrees) or until bubbles form on top and jiggly.',
+            'Preshape using bench scraper, rest for 30 mins uncovered.',
+            'Shape into a boule, place in a banneton and rest for 30 mins in the counter, 6 hours in the fridge (cold retardation).',
+            'Preheat dutch oven to 250 degrees. 25 mins bake covered. 25 mins bake uncovered at 240 degrees.'
+        ]
+    },
     'submarine-sauce':{
         'name': 'Submarine Sauce',
         'id': 'submarine-sauce',

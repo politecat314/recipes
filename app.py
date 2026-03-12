@@ -6,6 +6,26 @@ app = Flask(__name__)
 # This is a simple Python dictionary. You can easily add, edit, or
 # remove recipes here. For a bigger app, you'd use a database.
 RECIPES = {
+    'italian-bread':{
+        'name': 'Italian Bread',
+        'id': 'italian-bread',
+        'description': 'A classic Italian bread with a crispy crust and soft interior.',
+        'image_url': '/static/images/italian-bread.png',
+        'image_placeholder': 'https://via.placeholder.com/800x600.png?text=Italian+Bread',
+        'default_servings': 1,
+        'ingredients': [
+            {'quantity': 320, 'unit': 'g', 'name': 'Water'},
+            {'quantity': 8, 'unit': 'g', 'name': 'Salt'},
+            {'quantity': 2, 'unit': 'tsp', 'name': 'Instant yeast'},
+            {'quantity': 420, 'unit': 'g', 'name': 'All-purpose flour'},
+        ],
+        'instructions': [
+            'Mix the ingredients together and rest for 30 mins (autolyse).',
+            'Stretch and fold x4 every 30 mins for 2 hours (bulk fermentation).',
+            'Rest for 30 mins and bake. No need for shaping, dust the dutch oven with semolina flour and place the dough in the dutch oven.',
+            'Bake at 250 degrees for 25 mins covered. 10 mins bake uncovered at 240 degrees.'
+        ]
+    },
     'sourdough-cacio-e-pepe-boule':{
         'name': 'Sourdough Cacio e Pepe Boule',
         'id': 'sourdough-cacio-e-pepe-boule',

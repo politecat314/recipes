@@ -13,10 +13,10 @@ jobs:
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 68.183.177.15
-          username: amambe-deploy
+          host: 165.232.166.74
+          username: recipes
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /srv/recipes
+            cd /var/www/recipes
             git pull origin main
-            sudo systemctl restart recipes_app.service
+            sudo systemctl restart recipes

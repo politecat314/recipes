@@ -6,6 +6,33 @@ app = Flask(__name__)
 # This is a simple Python dictionary. You can easily add, edit, or
 # remove recipes here. For a bigger app, you'd use a database.
 RECIPES = {
+    'burger-buns': {
+        'name': 'Burger Buns',
+        'id': 'burger-buns',
+        'description': 'Soft, bakery-quality burger buns perfect for any burger.',
+        'image_url': '/static/images/burger_bun.jpg',
+        'image_placeholder': 'https://via.placeholder.com/800x600.png?text=Burger+Buns',
+        'default_servings': 6,
+        'ingredients': [
+            {'quantity': 300, 'unit': 'g', 'name': 'Bread flour'},
+            {'quantity': 160, 'unit': 'ml', 'name': 'Warm water or milk. If using milk powder, 20g milk + 140g water'},
+            {'quantity': 5, 'unit': 'g', 'name': 'Instant Yeast'},
+            {'quantity': 20, 'unit': 'g', 'name': 'Sugar'},
+            {'quantity': 6, 'unit': 'g', 'name': 'Salt'},
+            {'quantity': 30, 'unit': 'g', 'name': 'Unsalted butter (softened)'},
+            {'quantity': 1, 'unit': 'large', 'name': 'Egg'},
+            {'quantity': 1, 'unit': 'tbsp', 'name': 'Sesame seeds (optional)'}
+        ],
+        'instructions': [
+            'Mix and Activate the Yeast: Whisk the egg, add half to a large bowl and save the rest in the fridge for the egg wash. Add warm milk, yeast, and sugar.',
+            'Knead the Dough: Add flour and salt to the wet mixture and stir until a shaggy dough forms. Add softened butter and knead for 8-10 minutes until smooth, elastic, and slightly tacky.',
+            'First Rise: Shape into a smooth ball, place in a lightly oiled bowl, cover, and let rise for 1 to 1.5 hours until doubled in size.',
+            'Shape the Buns: Deflate dough and divide into 6 equal pieces (85g-90g each). Shape into tight balls, place on a lined baking sheet, and press down slightly to flatten.',
+            'Second Rise: Cover loosely and let rise for 45 to 60 minutes until puffy. Preheat oven to 190°C (375°F) during the last 15 minutes of this rise.',
+            'Bake: Mix the reserved egg with 1 tsp water and gently brush the tops of the buns. Sprinkle with sesame seeds if desired.',
+            'Bake for 15 to 18 minutes until golden brown. Cool on a wire rack. (Tip: Brush with melted butter immediately after baking for a glossy, soft crust).'
+        ]
+    },
     'italian-bread':{
         'name': 'Italian Bread',
         'id': 'italian-bread',
